@@ -1,0 +1,1 @@
+{"hyperparameters": {"annotations_file_train": "./data/train/labels.csv", "img_dir_train": "./data/train/images/", "device": "cuda", "workers": 4, "learning_rate": 1e-05, "batch_size": 100, "epochs": 300, "z_dim": 64, "hidden_dim": 256}, "loss": 6710298.2431640625}
