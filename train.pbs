@@ -8,5 +8,4 @@ cd $PBS_O_WORKDIR;
 
 module load singularity
 singularity exec /app1/common/singularity-img/3.0.0/pytorch_2.0_cuda_12.0_cudnn8-devel_u22.04.sif bash
-pip install --user -r requirements.txt
-python train.py -w 4 -l 1E-5 -b 100 -e 300 -z 64 --hidden-dim 256
+python train.py -w 4 -l 1E-5 -b 100 -e 300 -z 64 --hidden-dim 256 > stdout.$PBS_JOB_ID 2> stderr.$PBS_JOBID 3> job_name.o$PBS_JOBID

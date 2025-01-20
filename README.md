@@ -1,1 +1,1 @@
-# MNIST-VAE
+# HPC-MNIST-VAE
