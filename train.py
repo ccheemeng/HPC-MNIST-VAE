@@ -22,8 +22,7 @@ def main(annotations_file_train, img_dir_train,
     x_dim = len(dataset_train[0][0])
     encoder = Encoder(x_dim, hidden_dim, z_dim)
     decoder = Decoder(z_dim, hidden_dim, x_dim)
-    vae = VAE(encoder, decoder)
-    vae.to(device)
+    vae = VAE(encoder, decoder).to(device)
     optimiser = Adam(vae.parameters(), lr=learning_rate)
 
     print("Training VAE...")
@@ -35,8 +34,7 @@ def main(annotations_file_train, img_dir_train,
         print(f"Epoch {i}:")
         for batch in tqdm(loader_train):
             optimiser.zero_grad()
-            x = batch[0]
-            x.to(device)
+            x = batch[0].to(device)
             x_hat, mean, log_var = vae(x)
             loss = BCELoss().loss(x, x_hat, mean, log_var)
             total_loss += loss.item()
