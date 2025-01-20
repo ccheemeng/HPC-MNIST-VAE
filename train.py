@@ -1,5 +1,5 @@
 import torch
-from torch.utils.data import DataLoader, Subset
+from torch.utils.data import DataLoader
 from torch.optim import Adam
 from tqdm import tqdm
 
@@ -14,7 +14,7 @@ def main(annotations_file_train, img_dir_train,
          device, workers, learning_rate, batch_size, epochs,
          z_dim, hidden_dim):
     dataset_train = MNISTDataset(annotations_file_train, img_dir_train)
-    loader_train = DataLoader(Subset(dataset_train, range(10)),
+    loader_train = DataLoader(dataset_train,
                               batch_size=batch_size,
                               shuffle=True,
                               num_workers=workers)
