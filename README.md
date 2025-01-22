@@ -48,6 +48,12 @@ on the HPC system:
 * [```./train.pbs```](./train.pbs)
 * [```./train.py```](./train.py)  
 
+Set up the necessary packages in the desired Singularity image:  
+> ```module load singularity```  
+> ```singularity exec <singularity-image> bash```  
+> ```pip install -r requirements.txt```  
+> ```exit```  
+
 Ensure that [```./train.pbs```](./train.pbs) will load the desired Singularity 
 image. Modify training hyperparameters and PBS requested compute if necessary.  
 
