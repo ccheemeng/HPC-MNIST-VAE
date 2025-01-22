@@ -1,6 +1,6 @@
 # HPC-MNIST-VAE  
 
-This repo provides a basic implementation of a variational autoencoder (VAE) on 
+This repository provides a basic implementation of a variational autoencoder (VAE) on 
 the MNIST dataset with training on high-performance computing (HPC) systems 
 (specifically NUS HPC) in mind.  
 
