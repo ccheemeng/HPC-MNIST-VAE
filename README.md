@@ -24,8 +24,8 @@ The following commands should replicate a working environment for the desired
 Python and PyTorch versions:  
 > ```conda create -n <environment-name> python=<version>```  
 > ```conda install ipykernel```  
-> Desired PyTorch installation (see [PyTorch installation instructions]
-> (https://pytorch.org/get-started/previous-versions/))  
+> Desired PyTorch installation (see 
+[PyTorch installation instructions](https://pytorch.org/get-started/previous-versions/))  
 > ```pip install matplotlib pandas tqdm```  
 
 ## Data  
